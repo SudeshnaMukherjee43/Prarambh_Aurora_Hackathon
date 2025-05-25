@@ -1,0 +1,8 @@
+import os
+
+if not os.path.exists("users.csv"):
+    with open("users.csv", "w") as f:
+        f.write("name,email\n")
+
+with open("users.csv", "a") as f:
+    f.write(f"{name},{email}\n")
